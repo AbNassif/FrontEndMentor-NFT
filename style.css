@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.card {
+  width: 350px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  padding: 1.25rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+  box-shadow: 0px 30px 0px 15px #08111f, 0px 30px 0px 50px rgb(8 17 31 / 26%);
+}
+
+.card h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  padding-top: 15px;
+}
+
+.card h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card p {
+  font-size: 18px;
+  padding: 15px 0;
+  font-weight: lighter;
+  color: hsl(215deg 21% 52%);
+}
+
+.card .imageWrapper div {
+  width: 100%;
+  height: 310px;
+  border-radius: 5px;
+  background-image: url(images/image-equilibrium.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.card .imageWrapper div::before {
+  content: "";
+  display: block;
+  background-image: url(images/icon-view.svg);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: rgba(10, 180, 197, 0.5);
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+.card .imageWrapper div:hover::before {
+  opacity: 1;
+  transition: 0.5s opacity;
+}
+.iconRow,
+.iconRow div {
+  display: flex;
+}
+
+.iconRow,
+.iconRow div {
+  justify-content: space-between;
+  align-items: center;
+}
+.iconRow div:first-child img {
+  height: 100%;
+}
+
+.iconRow div:nth-child(2) img {
+  height: 100%;
+}
+.iconRow div p {
+  padding: 0;
+  padding-left: 5px;
+}
+
+.etheriumCount p {
+  color: hsl(178, 100%, 50%);
+}
+
+hr {
+  background-color: hsl(215, 32%, 27%);
+  border: 0;
+  height: 1.5px;
+  margin: 1rem 0 0.5rem;
+}
+
+.createdBy {
+  display: flex;
+  align-items: center;
+}
+
+.createdBy img {
+  max-width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.createdBy span {
+  color: #fff;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.createdBy span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  width: 100%;
+  background: rgb(20, 114, 255);
+  padding: 8px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 1.1rem;
+}
+
+.attribution a {
+  color: hsl(0deg 100% 35%);
+}
